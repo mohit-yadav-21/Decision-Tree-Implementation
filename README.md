@@ -18,32 +18,4 @@ The question:
 
     > You should run _usage.py_ to check your solutions. 
 
-1. 
-    Generate your dataset using the following lines of code
 
-    ```python
-    from sklearn.datasets import make_classification
-    X, y = make_classification(
-    n_features=2, n_redundant=0, n_informative=2, random_state=1, n_clusters_per_class=2, class_sep=0.5)
-
-    # For plotting
-    import matplotlib.pyplot as plt
-    plt.scatter(X[:, 0], X[:, 1], c=y)
-    ```
-
-    a) Show the usage of *your decision tree* on the above dataset. The first 70% of the data should be used for training purposes and the remaining 30% for test purposes. Show the accuracy, per-class precision and recall of the decision tree you implemented on the test dataset. **[0.5 mark]**
-
-    b) Use 5 fold cross-validation on the dataset. Using nested cross-validation find the optimum depth of the tree. **[1 mark]**
-    
-    > You should be editing `classification-exp.py` for the code containing the above experiments.
-
-2. 
-    a) Show the usage of your decision tree for the [automotive efficiency](https://archive.ics.uci.edu/ml/datasets/auto+mpg) problem. **[0.5 marks]**
-    
-    b) Compare the performance of your model with the decision tree module from scikit learn. **[0.5 marks]**
-    
-   > You should be editing `auto-efficiency.py` for the code containing the above experiments.
-    
-3. Create some fake data to do some experiments on the runtime complexity of your decision tree algorithm. Create a dataset with N samples and M binary features. Vary M and N to plot the time taken for: 1) learning the tree, 2) predicting for test data. How do these results compare with theoretical time complexity for decision tree creation and prediction. You should do the comparison for all the four cases of decision trees. **[1 marks]**	
-
-    >You should be editing `experiments.py` for the code containing the above experiments.
